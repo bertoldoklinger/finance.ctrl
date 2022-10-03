@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>finance.ctrl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">finance.ctrl $</h1>
+    </header>
+    <main class="container">
+      <section id="balance">
+        <h1>Balanço</h1>
+        <div class="card">
+          <h3>Entradas</h3>
+          <p>R$ 17.400,00</p>
+        </div>
+        <div class="card">
+          <h3>Saídas</h3>
+          <p>R$ 1.259,00</p>
+        </div>
+        <div class="card total">
+          <h3>Total</h3>
+          <p>R$ 16.141,00</p>
+        </div>
+      </section>
+      <section id="transactions">
+        <h2>Transações</h2>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="description">Luz</td>
+              <td class="expense">-R$500,00</td>
+              <td class="date">03/10/2022</td>
+            </tr>
+            <tr>
+              <td class="description">Criação de site</td>
+              <td class="income">R$2.000,00</td>
+              <td class="date">05/10/2022</td>
+            </tr>
+            <tr>
+              <td class="description">Hosting do Site(AWS)</td>
+              <td class="expense">-R$300,00</td>
+              <td class="date">07/10/2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>finance.ctrl$</p>
+    </footer>
+  </body>
+</html>
