@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>finance.ctrl</title>
+    <title>finance.ctrl$</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,32 +15,48 @@
   </head>
   <body>
     <header>
-      <h1 id="logo">finance.ctrl $</h1>
+      <h1 id="logo">finance.control</h1>
     </header>
+    
     <main class="container">
       <section id="balance">
-        <h1>Balanço</h1>
+        <h1 class="sr-only">Balanço</h1>
         <div class="card">
-          <h3>Entradas</h3>
+          <h3>
+           <span>Entradas</span>
+           <img src="./assets/income.svg" alt="Imagem de entradas">
+          </h3>
           <p>R$ 17.400,00</p>
         </div>
         <div class="card">
-          <h3>Saídas</h3>
+          <h3>
+            <span>Saídas</span>
+            <img src="./assets/expense.svg" alt="Imagem de saídas">
+           </h3>
+          </h3>
           <p>R$ 1.259,00</p>
         </div>
         <div class="card total">
-          <h3>Total</h3>
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Imagem do Total">
+           </h3>
+          </h3>
           <p>R$ 16.141,00</p>
         </div>
       </section>
       <section id="transactions">
-        <h2>Transações</h2>
+        <h2 class="sr-only">Transações</h2>
+
+        <a href="#" class="button new">+ Nova Transação</a>
+        
         <table id="data-table">
           <thead>
             <tr>
               <th>Descrição</th>
               <th>Valor</th>
               <th>Data</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -48,16 +64,25 @@
               <td class="description">Luz</td>
               <td class="expense">-R$500,00</td>
               <td class="date">03/10/2022</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover transação">
+              </td>
             </tr>
             <tr>
               <td class="description">Criação de site</td>
               <td class="income">R$2.000,00</td>
               <td class="date">05/10/2022</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover transação">
+              </td>
             </tr>
             <tr>
               <td class="description">Hosting do Site(AWS)</td>
               <td class="expense">-R$300,00</td>
               <td class="date">07/10/2022</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover transação">
+              </td>
             </tr>
           </tbody>
         </table>
