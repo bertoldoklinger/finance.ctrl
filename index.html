@@ -26,7 +26,7 @@
            <span>Entradas</span>
            <img src="./assets/income.svg" alt="Imagem de entradas">
           </h3>
-          <p>R$ 17.400,00</p>
+          <p>R$ 5.000,00</p>
         </div>
         <div class="card">
           <h3>
@@ -34,7 +34,7 @@
             <img src="./assets/expense.svg" alt="Imagem de saídas">
            </h3>
           </h3>
-          <p>R$ 1.259,00</p>
+          <p>R$ 2.000,00</p>
         </div>
         <div class="card total">
           <h3>
@@ -42,13 +42,13 @@
             <img src="./assets/total.svg" alt="Imagem do Total">
            </h3>
           </h3>
-          <p>R$ 16.141,00</p>
+          <p>R$ 3.000,00</p>
         </div>
       </section>
       <section id="transactions">
         <h2 class="sr-only">Transações</h2>
 
-        <a href="#" class="button new">+ Nova Transação</a>
+        <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
         
         <table id="data-table">
           <thead>
@@ -88,8 +88,47 @@
         </table>
       </section>
     </main>
+    <div class="modal-overlay active">
+      <div class="modal">
+        <div id="form">
+          <h2>Nova Transação</h2>
+          <form action="">
+             <div class="input-group">
+              <label class="sr.only" for="description">Descrição</label>
+              <input type="text" id="description" name="description" value="" placeholder="Descrição">
+             </div>
+
+             <div class="input-group">
+              <label 
+              class="sr.only" 
+              for="description">Descrição</label>
+              <input 
+                type="number"
+                step="0.01" 
+                id="amount" 
+                name="amount"  
+                placeholder="0,00"
+              />
+              <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+             </div>
+             <div class="input-group">
+              <label class="sr.only" for="date">Descrição</label>
+              <input type="date" id="date" name="date">
+             </div>
+
+             <div class="input-group actions">
+              <a href="#" onclick="Modal.close()"class="button cancel">Cancelar</a>
+              <button>Salvar</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+
     <footer>
       <p>finance.ctrl$</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

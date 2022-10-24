@@ -1,7 +1,16 @@
+:root {
+    --dark-blue: #363f5f;
+    --green: #49aa26;
+    --light-green:  #3dd705;
+    --red: #e92929;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    font-size:93.75%; 
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -70,25 +79,57 @@ h2{
     margin-top: 1rem;
 }
 .card.total {
-    background: #49AA26;
+    background: var(--green);
     color:white;
 }
 /*LINKS & BUTTONS ==============*/
 a {
-    color:#49aa26;
+    color:var(--green);
     text-decoration: none;
 }
 a:hover {
-    color:#3dd705;
+    color:var(--light-green);
+}
+button {
+    width: 100%;
+    height: 3.125rem;
+    border: none;
+    color: white;
+    background: var(--green);
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor:pointer;
+}
+button:hover {
+    background: var(--light-green);
 }
 .button.new {
     display: inline-block;
     margin-bottom: 0.8rem;
 }
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+.button.cancel:hover {
+    opacity:1;
+}
 /*TABELA========================*/
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
+    color: #969cb3;
 }
 table th{
     background-color: white;
@@ -107,7 +148,7 @@ table tbody tr td:first-child{
 table thead tr th:last-child,
 table tbody tr td:last-child
 {
-    border-radius: 0.25rem 0 0 0.25rem;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 table td {
     background: white;
@@ -128,12 +169,73 @@ td.income{
 td.expense {
     color:#e92929;
 } 
+/*MODAL=======================*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden ; 
+}
+.modal-overlay.active {
+    opacity:1;
+    visibility: visible;
+}
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+}
+
+/*FORM =========================*/
+#form {
+    max-width: 500px; 
+}
+#form h2 {
+    margin-top: 0;
+}
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small {
+    opacity: 0.4;
+}
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-group.actions .button,.input-group.actions button {
+    width: 48%;
+}
 /* FOOTER ============================*/
 footer {
     text-align: center;
     padding: 4rem 0 2rem;
     color:#363f5f;
     opacity: 0.6;
+}
+
+/* RESPONSIVIDADE ======================*/
+@media (min-width: 800px) {
+   html {
+    font-size: 87.5%;
+   } 
+   #balance {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem; 
+   }
 }
 
 
