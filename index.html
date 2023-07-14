@@ -1,134 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>finance.ctrl$</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans:wght@400;700&family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1 id="logo">finance.control</h1>
-    </header>
-    
-    <main class="container">
-      <section id="balance">
-        <h1 class="sr-only">Balanço</h1>
-        <div class="card">
-          <h3>
-           <span>Entradas</span>
-           <img src="./assets/income.svg" alt="Imagem de entradas">
-          </h3>
-          <p>R$ 5.000,00</p>
-        </div>
-        <div class="card">
-          <h3>
-            <span>Saídas</span>
-            <img src="./assets/expense.svg" alt="Imagem de saídas">
-           </h3>
-          </h3>
-          <p>R$ 2.000,00</p>
-        </div>
-        <div class="card total">
-          <h3>
-            <span>Total</span>
-            <img src="./assets/total.svg" alt="Imagem do Total">
-           </h3>
-          </h3>
-          <p>R$ 3.000,00</p>
-        </div>
-      </section>
-      <section id="transactions">
-        <h2 class="sr-only">Transações</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>finance.ctrl</title>
 
-        <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
-        
-        <table id="data-table">
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="description">Luz</td>
-              <td class="expense">-R$500,00</td>
-              <td class="date">03/10/2022</td>
-              <td>
-                <img src="./assets/minus.svg" alt="Remover transação">
-              </td>
-            </tr>
-            <tr>
-              <td class="description">Criação de site</td>
-              <td class="income">R$2.000,00</td>
-              <td class="date">05/10/2022</td>
-              <td>
-                <img src="./assets/minus.svg" alt="Remover transação">
-              </td>
-            </tr>
-            <tr>
-              <td class="description">Hosting do Site(AWS)</td>
-              <td class="expense">-R$300,00</td>
-              <td class="date">07/10/2022</td>
-              <td>
-                <img src="./assets/minus.svg" alt="Remover transação">
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <div class="bank">
+    <main>
+      <section class="hero">
+        <header data-aos="fade-down">
+          <h1 class="title">finance.ctrl</h1>
+        </header>
+        <div class="hero-items" data-aos="fade-up">
+          <div class="hero-item-1">
+            <p>Nunca foi tão fácil<br>controlar suas <br>finanças</p>
+          </div>
+          <div class="hero-item-2" data-aos="fade-up">
+            <p>Acesse agora mesmo<br>a sua conta finance.ctrl</p>
+            <a href="balance">
+              Continuar
+              <img src="assets/arrow.svg" alt="">
+            </a>
+          </div>
+        </div>
       </section>
+
+      <section class="details">
+        <div class="info" data-aos="fade-right">
+          <h3>Seu controle<br>financeiro na palma<br>da sua mão</h3>
+          <p>
+            Com uma interface intuitiva e amigável, você terá acesso a todas as ferramentas necessárias para gerenciar suas despesas, acompanhar suas receitas e planejar seu orçamento com facilidade. Agora, é possível visualizar todas as suas transações em um único lugar, permitindo uma análise clara e precisa de seus hábitos financeiros.
+          </p>
+        </div>
+        <div class="ilustration" data-aos="fade-left">
+          <img src="assets/budgetting.svg" alt="">
+        </div>
+      </section>
+
+      <section class="depoiment">
+        <h3 data-aos="zoom-out">Transformando a vida de milhões de clientes</h3>
+        <div class="box" data-aos="zoom-out">
+          <img src="assets/quote.svg" alt="">
+          <p>Sempre utilizei planilhas eletrônicas para realizar o controle das minhas finanças, porém, acabava deixando de lado pela dificuldade de manter tudo atualizado. Com o dev.finance, em 5 minutos consigo atualizar tudo o que aconteceu no dia e tirar insights das visões e gráficos que são gerados.</p>
+          <div class="person">
+            <img src="assets/user.svg" alt="">
+            <p>Bertoldo Klinger</p>
+          </div>
+          <div class="controls">
+            <button class="back">
+              <img src="assets/arrow-left.svg" alt="">
+            </button>
+            <button class="next">
+              <img src="assets/arrow-right.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-mode-exibition">
+        <div class="image" data-aos="fade-right">
+          <img src="assets/mockup.png" alt="Dev Finance on Dark Mode">
+        </div>
+        <div class="info" data-aos="fade-left">
+          <h3>Disponível em modo noturno</h3>
+          <p>
+            Agora, nosso aplicativo está disponível em modo noturno, pensado exclusivamente para oferecer a melhor experiência aos nossos usuários. Além de um visual incrível, o modo noturno traz uma série de benefícios que vão além do estético.
+
+Com o modo noturno ativado, você poderá economizar bateria do seu dispositivo, aproveitando ao máximo cada carga. A interface escura reduz o consumo de energia, permitindo que você utilize o aplicativo por mais tempo, sem se preocupar com a duração da bateria.</p>
+          <ul>
+            <li>
+              <img src="assets/check.svg" alt="">
+              Economia de Bateria
+            </li>
+            <li>
+              <img src="assets/check.svg" alt="">
+              Saúde Visual
+            </li>
+            <li>
+              <img src="assets/check.svg" alt="">
+              Acessibilidade
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </main>
-    <div class="modal-overlay active">
-      <div class="modal">
-        <div id="form">
-          <h2>Nova Transação</h2>
-          <form action="">
-             <div class="input-group">
-              <label class="sr.only" for="description">Descrição</label>
-              <input type="text" id="description" name="description" value="" placeholder="Descrição">
-             </div>
-
-             <div class="input-group">
-              <label 
-              class="sr.only" 
-              for="description">Descrição</label>
-              <input 
-                type="number"
-                step="0.01" 
-                id="amount" 
-                name="amount"  
-                placeholder="0,00"
-              />
-              <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
-             </div>
-             <div class="input-group">
-              <label class="sr.only" for="date">Descrição</label>
-              <input type="date" id="date" name="date">
-             </div>
-
-             <div class="input-group actions">
-              <a href="#" onclick="Modal.close()"class="button cancel">Cancelar</a>
-              <button>Salvar</button>
-             </div>
-          </form>
-        </div>
-      </div>
-    </div>
   
-
     <footer>
-      <p>finance.ctrl$</p>
+      <p>finance.ctrl</p>
+      <ul class="social">
+          <li><a href="#"><img src="assets/instagram.svg" alt="finance.ctrl instagram"></a></li>
+          <li><a href="#"><img src="assets/youtube.svg" alt="finance.ctrl youtube"></a></li>
+          <li><a href="#"><img src="assets/facebook.svg" alt="finance.ctrl facebook"></a></li>
+          <li><a href="#"><img src="assets/twitter.svg" alt="finance.ctrl twitter"></a></li>
+        </ul>
     </footer>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>

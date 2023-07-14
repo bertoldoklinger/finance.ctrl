@@ -1,0 +1,104 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%; /* 15px */
+}
+
+body {
+  background: var(--bg-color);
+  font-family:'Poppins', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Buttons ===================== */
+
+.button {
+  background: none;
+  border: none;
+  outline: none;
+
+  color: #49AA46;
+
+  &:hover {
+    color: #3dd705;
+  }
+
+  &.new {
+    margin-bottom: 0.8rem;
+  }
+
+  &.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+    
+    height: 50px;
+
+    @include flex(center, center);
+
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.save {
+    width: 100%;
+    height: 50px;
+
+    color: white;
+    background: var(--primary-color);
+
+    padding: 0;
+
+    border-radius: 0.25rem;
+
+    &:hover {
+      background: var(--light-green);
+    }
+  }
+}
+
+.container {
+  width: unquote($string: "min(90vw, 800px)");
+  margin: auto;
+}
+
+/* Screen Readers Only ===================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Animations
+
+.rotate-scale-down-ver {
+	animation: rotate-scale-down-ver 0.65s linear both;
+}
+
+@keyframes rotate-scale-down-ver {
+  0% {
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    transform: scale(0.5) rotateY(180deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}

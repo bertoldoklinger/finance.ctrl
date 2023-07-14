@@ -1,0 +1,207 @@
+/* Titles ===================== */
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--font-color);
+
+  font-weight: normal;
+}
+
+/* Header ===================== */
+header {
+  background: var(--bg-header);
+  padding: 2rem 0 10rem;
+  text-align: center;
+
+  @include flex(center, center, column);
+}
+
+/* Balance ===================== */
+#balance {
+  margin-top: -8rem;
+
+  h2 {
+    color:white;
+    margin-top: 0;
+  }
+}
+
+/* Cards ===================== */
+.card {
+  background: var(--secondary-color);
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+
+  margin-bottom: 2rem;
+
+  color: var(--font-color);
+
+  h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    @include flex(space-between, center, row);
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3rem;
+  
+    margin-top: 1rem;
+  }
+
+  &.total {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+/* Table ===================== */
+#transaction {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+#data-table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+
+  thead tr th:first-child,
+  tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  thead tr th:last-child, 
+  tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+
+  th {
+    background: var(--secondary-color);
+    font-weight: normal;
+    padding: 1rem 2rem;
+
+    text-align: left;
+  }
+
+  tbody {
+    tr {
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    td {
+      background: var(--secondary-color);
+      padding: 1rem 2rem;
+    }
+  }
+
+  td {
+    &.description {
+      color: var(--font-color);
+    }
+
+    &.income {
+      color: #12a454;
+    }
+
+    &.expense {
+      color: #e92929;
+    }
+  }
+}
+
+/* Modal ===================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  @include flex(center, center);
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal {
+    background: var(--bg-color);
+    padding: 2.4rem;
+    position: relative;
+  }
+}
+
+/* Form ===================== */
+#form {
+  max-width: 500px; // Pq usou px e não rem?
+
+  h2 {
+    margin-top: 0;
+  }
+
+  input {
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  .input-group {
+    margin-top: 0.8rem;
+
+    input {
+      background: var(--secondary-color);
+      color: var(--font-color);
+    }
+
+    .help {
+      opacity: 0.4;
+      color: var(--font-color);
+    }
+
+    &.actions {
+      @include flex(space-between, center);
+
+      .button {
+        width: 48%;
+      }
+    }
+  }
+}
+
+/* Footer ===================== */
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--font-color);
+  opacity: 0.6;
+}
+
+/* Responsive ===================== */
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%; // 14px
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
